@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    caret-color: transparent;
+    user-select: none;
 }
 
 /* GLOBAL */
@@ -14,9 +16,19 @@ body {
 
 /* NAVBAR */
 .navbar {
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-    padding: 18px 0;
+    backdrop-filter: blur(12px);
+    padding: 63.5px 0;
+    transition: all 0.3s ease;
+    background: linear-gradient(
+        to bottom,            
+        rgba(26, 25, 25, 0.8),
+        rgba(54, 51, 51, 0.05) 
+    );
+}
+
+.scrolled{
+    padding: 12.5px 0;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand img {
@@ -39,22 +51,46 @@ body {
     color: #fff;
 }
 
+
+
+/* Ikonice navbar-a */
+.navbar-icons a {
+    font-size: 1.1rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.navbar-icons a:hover {
+    color: #b08968;
+}
+
+/* Mobile spacing */
+@media (max-width: 992px) {
+    .navbar-icons {
+        justify-content: center; /* centrirano iznad linkova */
+        width: 100%;
+        margin-top: 18px;
+    }
+}
+
+
 /* HERO */
 .hero {
     height: 100vh;
-    background: url("imgs/bgd.jpeg") center/cover no-repeat;
+    background: url("images/DSC_1767.JPG") center/cover no-repeat;
     position: relative;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 3;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 5 !important;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -106,12 +142,79 @@ body {
     color: #bbb;
 }
 
+
+/* SLIKA */
+.slika {
+    height: 400px;
+    background: url("images/DSC_1764.png") center/cover no-repeat;
+    margin-bottom: 80px;
+    background-size: contain;
+    z-index: 1;
+}
+
+.overlay1 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 15, 15, 0.32);
+    z-index: 2;
+}
+
+/* FOOTER */
 /* FOOTER */
 .footer {
-    padding: 40px 0;
-    text-align: center;
-    background: #0b0b0b;
-    color: #777;
+    background-color: #0f0f0f;
+    color: #ccc;
+    padding: 60px 0 30px;
+    font-size: 14px;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    display: inline-block; /* ostaje inline-block */
+}
+
+/* LEFT TITLE – levo poravnanje */
+.text-md-start .footer-title::after {
+    content: "";
+    display: block;         /* ide u novi red ispod teksta */
+    width: 40px;
+    height: 1px;
+    background: #777;
+    margin-top: 8px;
+    margin-left: 0;         /* linija počinje od leve strane teksta */
+}
+
+/* CENTER TITLE – centrirano */
+.text-center .footer-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #777;
+    margin: 8px auto 0;     /* automatski centrirano */
+}
+
+/* RIGHT TITLE – desno poravnanje */
+.text-md-end .footer-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #777;
+    margin-top: 8px;
+    margin-left: auto;      /* linija stoji desno */
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #666;
 }
 
 
@@ -202,6 +305,10 @@ body {
 
 
 
+.msg{
+    position: absolute;
+    bottom: 85px;
+}
 
 .hero-vertical-line {
     position: absolute;
@@ -272,4 +379,302 @@ body {
     background: #fff; /* boja linija */
     vertical-align: middle;
     margin: 0 0.5rem;
+}
+
+
+
+
+
+
+
+/* GALERIJA */
+
+.gallery-preview {
+    background: #0b0b0b;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.gallery-preview h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #e5e5e5;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.preview-grid img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    filter: grayscale(10%);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.preview-grid img:hover {
+    transform: scale(1.03);
+    filter: grayscale(0);
+}
+
+.btn-more {
+    color: #b08968;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #b08968;
+    padding-bottom: 4px;
+}
+
+@media (max-width: 768px) {
+    .preview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-grid img {
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+/* GALERIJA */
+
+.full-gallery {
+    background: #0b0b0b;
+    padding: 120px 0;
+}
+
+.full-gallery h1 {
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 2.5rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    font-size: 0.9rem;
+    color: #e5e5e5;
+}
+
+@media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* KONTAKT FORMA */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form button {
+    background: #b08968;
+    color: #111;
+    font-weight: 600;
+    padding: 16px 35px;
+    border-radius: 50px;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #d4a373;
+}
+
+/* RESPONSIVE KONTAKT */
+@media (max-width: 768px) {
+    .contact .col-md-6,
+    .contact .col-md-4 {
+        text-align: center;
+    }
+}
+
+/* GALERIJA MOBILE */
+@media (max-width: 768px) {
+    .gallery-track img {
+        height: 150px;
+    }
+}
+
+/* ICONS FIX MOBILE */
+@media (max-width: 992px) {
+    .navbar-icons {
+        order: -1; /* prikazuje se iznad linkova */
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* HERO content wrapper */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Naslov */
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 7vw, 6rem);
+    letter-spacing: 8px;
+    color: #fff;
+}
+
+/* Ikonice desno */
+.hero-icons {
+    position: absolute;
+    right: 20px;
+    top: 48%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.hero-icons a:hover {
+    color: #b08968;
+}
+
+/* Pulsirajuća linija */
+.hero-vertical-line {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 50px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 1px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(10px); }
+}
+
+/* RESPONSIVE HERO - mobilni uređaji */
+@media (max-width: 992px) {
+    .hero-icons {
+        position: static; /* više nije apsolutno */
+        transform: none;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap; 
+}
+
+.lang-btn:hover{
+    color: white;
+    cursor: pointer;
 }
