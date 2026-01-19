@@ -12,46 +12,26 @@ window.addEventListener('scroll', function() {
 
 
 
-
-const translations = {
-    sr: {
-        hero_title: "KOVAČNICA<br>NOŽEVA",
-        nav_home: "Početna",
-        nav_services: "Usluge",
-        nav_about: "O nama",
-        nav_contact: "Kontakt",
-        newsletter_title: "Prijavite se na Newsletter",
-        newsletter_text: "Budite prvi koji će saznati za nove modele i ponude."
-    },
-    en: {
-        hero_title: "KNIFE<br>FORGE",
-        nav_home: "Home",
-        nav_services: "Services",
-        nav_about: "About",
-        nav_contact: "Contact",
-        newsletter_title: "Subscribe to our Newsletter",
-        newsletter_text: "Be the first to know about new knives and offers."
-    }
-};
-
-const languageSelect = document.getElementById("languageSelect");
+const langEnElems = document.querySelectorAll('[data-en]');
+const langHrElems = document.querySelectorAll('[data-hr]');
 
 function setLanguage(lang) {
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
+    langEnElems.forEach(el => {
+        if(el.placeholder !== undefined) {
+            el.placeholder = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-hr');
+        } else {
+            el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-hr');
         }
     });
-
-    localStorage.setItem("lang", lang);
 }
 
-languageSelect.addEventListener("change", e => {
-    setLanguage(e.target.value);
-});
+// Default English
+setLanguage('en');
 
-// Učitaj zapamćen jezik
-const savedLang = localStorage.getItem("lang") || "sr";
-languageSelect.value = savedLang;
-setLanguage(savedLang);
+// Event listeners for flags
+document.querySelectorAll('#lang-en, #lang-en-mobile').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage('en'));
+});
+document.querySelectorAll('#lang-hr, #lang-hr-mobile').forEach(btn => {
+    btn.addEventListener('click', () => setLanguage('hr'));
+});
