@@ -1,99 +1,131 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MadDeer – Kovačnica Noževa</title>
+    <title>MadDeer – Knife Workshop</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-            <img src="imgs/Logo white.png" alt="logo">
-            <span>MadDeer</span>
-        </a>
+  <div class="container d-flex flex-wrap align-items-center position-relative">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center gap-2 me-lg-auto" href="#home">
+      <img src="imgs/Logo white.png" alt="logo">
+      <span>Mad Deer</span>
+    </a>
 
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto gap-lg-4">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Usluge</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">O nama</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Galerija</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
-            </ul>
-        </div>
+    <!-- Toggler -->
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse justify-content-center order-lg-1" id="nav">
+      <ul class="navbar-nav gap-lg-4 w-100 justify-content-center">
+        <li class="nav-item"><a class="nav-link" href="#home" data-en="Home" data-hr="Početna">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proizvodi" data-en="Products" data-hr="Proizvodi">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#usluge" data-en="Services" data-hr="Usluge">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galerija" data-en="Gallery" data-hr="Galerija">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontakt" data-en="Contact" data-hr="Kontakt">Contact</a></li>
+      </ul>
+
+    <!-- Language selector (desktop) -->
+    <div class="language-selector align-items-center gap-3 order-lg-2">
+        <span class="lang-btn" id="lang-hr" data-lang="hr">HR</span>
+        <span class="lang-separator">|</span>
+        <span class="lang-btn active" id="lang-en" data-lang="en">ENG</span>
     </div>
+
+  </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section id="home" class="hero">
     <div class="hero-overlay"></div>
-    <div class="container hero-content">
-        <h1>UNIKATNI<br>NOŽEVI</h1>
-        
+
+    <div class="container-fluid hero-content">
+        <h1 data-en="UNIQUE<br>KNIVES" data-hr="UNIKATNI<br>NOŽEVI">UNIQUE<br>KNIVES</h1>
+    
+
+        <div class="hero-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p class="msg">Strive Beyond Ordinary</p>
         <div class="hero-vertical-line"></div>
     </div>
 </section>
 
-<!-- USLUGE -->
-<section class="services container">
-    <h2 class="section-title"><span>PROIZVODI</span></h2>
+
+
+<!-- PROIZVODI -->
+<section id="proizvodi" class="services container">
+    <h2 class="section-title"><span data-en="PRODUCTS" data-hr="PROIZVODI">PRODUCTS</span></h2>
     <div class="row g-4">
         <div class="col-md-4">
             <div class="service-card">
                 <img src="icons/knife.png" class="icon-invert">
-                <h5>Noževi</h5>
-                <p>Ručno kovani noževi po vašoj meri, sa vrhunskim materijalima.</p>
+                <h5 data-en="Knives" data-hr="Noževi">Knives</h5>
+                <p data-en="Hand-forged knives made to your specifications with premium materials." data-hr="Ručno kovani noževi po vašoj meri, sa vrhunskim materijalima.">
+                    Hand-forged knives made to your specifications with premium materials.
+                </p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="service-card">
                 <img src="icons/tag.png" class="icon-invert">
-                <h5>Ručke</h5>
-                <p>Kožne futrole izrađene ručno, dugotrajne i elegantne.</p>
+                <h5 data-en="Handles" data-hr="Ručke">Handles</h5>
+                <p data-en="Handmade leather sheaths, durable and elegant." data-hr="Kožne futrole izrađene ručno, dugotrajne i elegantne.">
+                    Handmade leather sheaths, durable and elegant.
+                </p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="service-card">
-                <img src="icons/cutting.png" class="icon-invert">
-                <h5>Futrole</h5>
-                <p>Personalizujte nož inicijalima, imenom ili simbolom.</p>
+                <img src="icons/case.png" class="icon-invert">
+                <h5 data-en="Sheaths" data-hr="Futrole">Sheaths</h5>
+                <p data-en="Personalize your knife with initials, name, or symbol." data-hr="Personalizujte nož inicijalima, imenom ili simbolom.">
+                    Personalize your knife with initials, name, or symbol.
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-
-<section class="services container mt-5">
-    <h2 class="section-title"><span>USLUGE</span></h2>
+<!-- USLUGE -->
+<section id="usluge" class="services container mt-5">
+    <h2 class="section-title"><span data-en="SERVICES" data-hr="USLUGE">SERVICES</span></h2>
     <div class="row g-4">
         <div class="col-md-6">
             <div class="service-card">
                 <img src="icons/cutting.png" class="icon-invert">
-                <h5>Graviranje</h5>
-                <p>Personalizujte nož inicijalima, imenom ili simbolom.</p>
+                <h5 data-en="Engraving" data-hr="Graviranje">Engraving</h5>
+                <p data-en="Personalize your knife with initials, name, or symbol." data-hr="Personalizujte nož inicijalima, imenom ili simbolom.">
+                    Personalize your knife with initials, name, or symbol.
+                </p>
             </div>
         </div>
         <div class="col-md-6">
             <div class="service-card">
-                <img src="icons/shield.png" class="icon-invert">
-                <h5>Oštrenje</h5>
-                <p>Oštrenje, poliranje i servis vaših noževa da ostanu besprekorno kvalitetni.</p>
+                <img src="icons/sharp.png" class="icon-invert">
+                <h5 data-en="Sharpening" data-hr="Oštrenje">Sharpening</h5>
+                <p data-en="Sharpening, polishing, and servicing your knives to maintain top quality." data-hr="Oštrenje, poliranje i servis vaših noževa da ostanu besprekorno kvalitetni.">
+                    Sharpening, polishing, and servicing your knives to maintain top quality.
+                </p>
             </div>
         </div>
     </div>
@@ -101,32 +133,112 @@
 
 
 
+<section class="container-fluid slika">
+    <div class="overlay1"></div>
+</section>
 
-<section class="newsletter">
+
+
+<!-- GALERIJA -->
+<section id="galerija" class="full-gallery">
     <div class="container">
-        <div class="newsletter-box">
-            <div class="newsletter-text">
-                <h2>Prijavite se na Newsletter</h2>
-                <p>
-                    Budite prvi koji će saznati za nove modele noževa,
-                    ekskluzivne ponude i specijalne edicije.
+        <h2 class="section-title">
+            <span data-en="GALLERY" data-hr="GALERIJA">GALLERY</span>
+        </h2>
+
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/20250108_145040.jpg" alt="">
+                <div class="overlay">
+                    <p>Hand forged chef knife</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/20250126_025444.jpg" alt="">
+                <div class="overlay">
+                    <p>Damascus steel blade</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/20250108_145040.jpg" alt="">
+                <div class="overlay">
+                    <p>Hand forged chef knife</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/20250126_025444.jpg" alt="">
+                <div class="overlay">
+                    <p>Damascus steel blade</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/20250126_025444.jpg" alt="">
+                <div class="overlay">
+                    <p>Damascus steel blade</p>
+                </div>
+            </div>
+
+            <!-- ponavljaš koliko želiš -->
+        </div>
+
+        <div style="text-align:center; margin-top:60px;">
+            <a href="gallery.html" class="btn-more" data-en="MORE →" data-hr="VIŠE →">MORE →</a>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row gy-4 align-items-start">
+
+            <!-- LEFT -->
+            <div class="col-md-4 text-md-start text-center">
+                <h6 class="footer-title">MadDeer</h6>
+                <p class="footer-text"
+                   data-en="Handcrafted knives made with precision and passion."
+                   data-hr="Ručna izrada noževa s preciznošću i strašću.">
+                   Handcrafted knives made with precision and passion.
                 </p>
             </div>
 
-            <form class="newsletter-form">
-                <input type="email" placeholder="Vaša email adresa" required>
-                <button type="submit">Prijavi se</button>
-            </form>
+            <!-- CENTER -->
+            <div class="col-md-4 text-center">
+                <h6 class="footer-title">Contact</h6>
+                <p><i class="fas fa-phone-alt me-2"></i>+385 123 456 789</p>
+                <p><i class="fas fa-envelope me-2"></i>info@maddeer.rs</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i>Osijek, Croatia</p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-md-4 text-md-end text-center">
+                <h6 class="footer-title">© 2026</h6>
+                <p class="footer-text">MadDeer – Knife Workshop</p>
+            </div>
+
+        </div>
+
+        <!-- bottom line -->
+        <div class="footer-bottom text-center mt-4">
+            <span>Made by MadDeer</span>
         </div>
     </div>
-</section>
-
-
-
-<footer class="footer">
-    <p>© 2025 MadDeer – Kovačnica Noževa</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+
 </body>
 </html>
