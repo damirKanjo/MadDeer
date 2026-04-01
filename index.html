@@ -8,7 +8,7 @@
     <meta name="description" content="Izrada unikatnih noževa i kožnih proizvoda. Ručno kovani noževi, personalizirane drške i pažljivo izrađeni kožni predmeti.">
     <meta name="keywords" content="izrada noževa, ručno kovani noževi, kožni proizvodi, drške za noževe, unikatni noževi, kvalitetni noževi, kožna galanterija">
     <meta name="author" content="Mad Deer">
-    <link rel="icon" type="image/png" href="images/Logo white.png">
+    <link rel="icon" type="image/png" href="imgs/Logo white.png">
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,10 +39,10 @@
     <!-- Nav Links -->
     <div class="collapse navbar-collapse justify-content-center order-lg-1" id="nav">
       <ul class="navbar-nav gap-lg-4 w-100 justify-content-center">
-        <li class="nav-item"><a class="nav-link" href="#home" data-en="HOME" data-hr="Početna"></a></li>
-        <li class="nav-item"><a class="nav-link" href="#proizvodi" data-en="PRODUCTS" data-hr="Proizvodi"></a></li>
-        <li class="nav-item"><a class="nav-link" href="#galerija" data-en="GALLERY" data-hr="Galerija"></a></li>
-        <li class="nav-item"><a class="nav-link" href="#kontakt" data-en="CONTACT" data-hr="Kontakt"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#home" data-en="HOME" data-hr="POČETNA"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#proizvodi" data-en="PRODUCTS" data-hr="PROIZVODI"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#galerija" data-en="GALLERY" data-hr="GALERIJA"></a></li>
+        <li class="nav-item"><a class="nav-link" href="#kontakt" data-en="CONTACT" data-hr="KONTAKT"></a></li>
       </ul>
 
     <!-- Language selector (desktop) -->
@@ -62,7 +62,7 @@
     <div class="container-fluid hero-content px-5">
         <h1 data-en="craftsmanship" data-hr="zanatsko umjeće" style="width: 100%;" ></h1>
         <p style="width: 100%; text-align: left;">
-            We are dedicated to crafting unique, high-quality knives and leather goods. </br>
+            Dedicated to crafting unique, high-quality knives and leather goods. </br>
             Every piece we create is the result of careful design, premium materials,</br> 
             and meticulous hand craftsmanship.
         </p>
@@ -81,10 +81,44 @@
 </section>
 
 
+<!-- <section class="container-fluid p-5">
+    <h2>NEW ARRIVALS</h2>
+    <div class="row">
+        <div class="col-3">
+            <img src="images/DSC_0076.JPG" 
+                data-bs-toggle="modal" 
+                data-bs-target="#imageModal"
+                onclick="openImage(this)"
+                style="height: 250px;">
+        </div>
+        <div class="col-3">
+            <img src="images/DSC_0076.JPG" 
+                data-bs-toggle="modal" 
+                data-bs-target="#imageModal"
+                onclick="openImage(this)"
+                style="height: 250px;">
+        </div>
+        <div class="col-3">
+            <img src="images/DSC_0076.JPG" 
+                data-bs-toggle="modal" 
+                data-bs-target="#imageModal"
+                onclick="openImage(this)"
+                style="height: 250px;">
+        </div>
+        <div class="col-3" style="text-align: center; padding-top: 150px; margin: auto;">
+            <p style="border: 1px solid rgb(255, 255, 255); padding: 18px 0px; cursor: pointer;">
+                ORDER HERE
+            </p>
+        </div>
+    </div>
+</section> -->
 
-<section class="container-fluid px-5" style="height: 1050px; padding-top: 300px; background-color: rgb(20, 20, 20);">
-    <div class="row" style="border-left: 1px solid whitesmoke;">
-        <div class="col-xl-5 col-lg-10 ps-5">
+
+<!-- ABOUT-->
+<section class="container-fluid" style="height: 50vw; padding-top: 12vw !important;">
+    <div class="row" style="background-color: #111;">
+        <div class="col-xl-6 col-lg-10 ps-5 mt-5" 
+             style="position: relative; min-height: 500px;">
             <h4>
                 Craftsmanship </br>
             </h4>
@@ -93,57 +127,82 @@
                 THAT MEETS ARTISTRY
             </h1>
 
-            <p style="text-align: justify !important;" style="border: 1px white solid !important;">
+            <p style="text-align: justify !important;">
                 Exceptional quality and uncompromising attention to detail.
                 Each item we produce is crafted with precision and care, ensuring our clients receive products that are 
                 not only functional, but truly unique.
-
                 Our mission? Premium, handcrafted pieces that meet the highest 
                 standards of craftsmanship and exceed the expectations of those who value quality without compromise.
             </p>
-
+            <p style="position: absolute; bottom: 0px; left: 84%;">
+                MADE IN CROATIA
+            </p>
         </div>
         
-        <div class="col-7">
+        <div class="col-6 pe-5">
             <div class="slika">
-                <div class="overlay1"></div>
             </div>        
-
         </div>
     </div> 
-
-
 </section>
 
 
 
 <!-- PROIZVODI -->
-<section id="proizvodi" class="services container-fluid">
-    <div class="row px-5 g-5">
-        <div class="col-md-3">
-            <div class="service-card" style="background-image: url(images/DSC_1775.JPG); background-size: cover; background-position: center; opacity: 0.65;">
-                <p data-en="Hand forged knives made with premium materials." data-hr="Ručno kovani noževi izrađeni od vrhunskih materijala."></p>
-                <h5 data-en="KNIVES" data-hr="NOŽEVI"></h5>
+<section id="proizvodi" class="services container-fluid pt-5">
+    <div class="row">
+        <div class="col-md-3 p-0 m-0">
+            <div class="service-card" style="height: 775px; background-image: url(images/DSC_1775.JPG); background-size: cover; background-position: center;">
+                <div class="overlay"></div>
+
+                <div class="content">
+                    <p data-en="Hand forged knives made with premium materials." data-hr="Ručno kovani noževi izrađeni od vrhunskih materijala."></p>
+                    <h5 data-en="KNIVES" 
+                        data-hr="NOŽEVI"
+                        style="padding-top: 500px;">
+                    </h5>
+                </div>
             </div>
         </div>
         
-        <div class="col-md-3">
-            <div class="service-card" style="background-image: url(images/DSC_0079.JPG); background-size: cover; background-position: center;">
-                <p data-en="Handmade leather products, durable and elegant." data-hr="Kožna galanterija, dugotrajni i elegantni predmeti od kože."></p>
-                <h5 data-en="LEATHER" data-hr="KOŽA"></h5>
+        <div class="col-md-3 p-0 m-0">
+            <div class="service-card" style="height: 775px; background-image: url(images/DSC_0079.JPG); background-size: cover; background-position: center;">
+                <div class="overlay"></div>
+
+                <div class="content">
+                    <p data-en="Handmade leather products, durable and elegant." data-hr="Kožna galanterija, dugotrajni i elegantni predmeti od kože."></p>
+                    <h5 data-en="LEATHER" 
+                        data-hr="KOŽA"
+                        style="padding-top: 500px;">
+                    </h5>
+                </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="service-card" style="background-image: url(images/DSC_0220.JPG); background-size: cover; background-position: center; opacity: 0.65;">
-                <p data-en="Hand forged knives made with premium materials." data-hr="Ručno kovani noževi izrađeni od vrhunskih materijala."></p>
-                <h5 data-en="SHARPENING" data-hr="OŠTRENJE"></h5>
+        <div class="col-md-3 p-0 m-0">
+            <div class="service-card" style="height: 775px; background-image: url(images/DSC_0220.JPG); background-size: cover; background-position: center; position: relative;">
+                <div class="overlay"></div>
+
+                <div class="content">
+                    <p data-en="Hand forged knives made with premium materials." data-hr="Ručno kovani noževi izrađeni od vrhunskih materijala."></p>
+                    <h5 data-en="SHARPENING" 
+                        data-hr="OŠTRENJE"
+                        style="padding-top: 500px;">
+                    </h5>
+                </div>
             </div>
         </div>
         
-        <div class="col-md-3">
-            <div class="service-card" style="background-image: url(images/DSC_0115-min.JPG); background-size: cover; background-position: center;">
-                <p data-en="Handmade leather products, durable and elegant." data-hr="Kožna galanterija, dugotrajni i elegantni predmeti od kože."></p>
-                <h5 data-en="ENGRAVING" data-hr="GRAVIRANJE"></h5>
+        <div class="col-md-3 p-0 m-0">
+            <div class="service-card" style="height: 775px; background-image: url(images/DSC_0115-min.JPG); background-size: cover; background-position: center; position: relative;">
+                <div class="overlay"></div>
+
+                <div class="content">
+                    <p data-en="Handmade leather products, durable and elegant." data-hr="Kožna galanterija, dugotrajni i elegantni predmeti od kože."></p>
+                    <h5 data-en="CUSTOM ORDERS" 
+                        data-hr="CUSTOM NARUDŽBE"
+                        style="padding-top: 500px;">
+                    </h5>
+                </div>
             </div>
         </div>
     </div>
@@ -210,19 +269,9 @@
 
                 </div>
             </div>
-
         </div>
     </div>
-
-
 </section>
-
-
-
-
-
-
-
 
 
 
@@ -246,14 +295,8 @@
 
 
 
-
-
-
-
-
-
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" id="kontakt">
     <div class="container">
         <div class="row gy-4 align-items-start">
 
