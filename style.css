@@ -95,7 +95,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.62);
+    background: rgba(0, 0, 0, 0.64);
     z-index: 3;
 }
 
@@ -119,17 +119,33 @@ body {
 
 
 
-/* SERVICES */
-.services {
-     padding: 120px 0;
-}
 
+
+/* SERVICES */
 .service-card {
     padding: 80px 0px !important;
     text-align: center;
     transition: transform .4s ease, background .4s ease;
+    position: relative;     
+    overflow: hidden;         
+    cursor: pointer;
 }
 
+
+/* overlay preko slike */
+.service-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);  
+    transition: 0.4s ease;
+    z-index: 1;
+}
+
+/* hover overlay */
+.service-card:hover::after {
+    background: rgba(0,0,0,0.6);
+}
 
 .service-card img {
     width: 70px;
@@ -142,38 +158,51 @@ body {
     margin-bottom: 15px;
 }
 
-
-.service-card p{
+/* da tekst bude iznad overlay-a */
+.service-card h5,
+.service-card p {
     position: relative;
-    font-size: 1rem;
-    color: #bbb;
-    padding: 47.5px 0;
+    z-index: 2;
 }
 
 
-.service-card p::after {
+.service-card h5{
+    position: relative;
+    padding: 47.5px 0;
+}
+
+/* PARAGRAF (sakriven pa se pojavljuje) */
+.service-card p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+    margin-bottom: 10px;
+}
+
+/* hover tekst */
+.service-card:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* linije */
+.service-card h5::after {
     content: "";
     position: absolute;
-    left: 0;
-    width: 100%;
+    left: 5%;
+    width: 90%;
     height: 1px;
     background: linear-gradient(
         to right,
         transparent,
-        rgb(109, 109, 109),
+        rgb(255, 255, 255),
         transparent
     );
 }
 
-.service-card p::before {
-    top: 0;
-}
-
-.service-card p::after {
+.service-card h5::after {
     bottom: 0;
 }
-
-
 
 
 
@@ -181,16 +210,9 @@ body {
 /* SLIKA */
 .slika {
     position: relative;
-    background: url("images/DSC_1764.png") center/cover no-repeat;
-    background-size: contain;
-    margin: 180px 0 0 0 !important;
-    rotate: -35deg;
-    transform: rotateY(180deg);
-}
-
-.overlay1 {
-    height: 250px;
-    z-index: 2;
+    background: url("images/DSC_0114.JPG") center/cover no-repeat;
+    background-size: cover;
+    height: 565px;
 }
 
 /* FOOTER */
@@ -307,17 +329,10 @@ body {
 
 
 
-
-
-
 .icon-invert {
     filter: invert(1);        /* invertuje boje: crno postaje belo */
     transition: filter 0.3s ease; /* za glatku promenu ako treba */
 }
-
-
-
-
 
 
 
@@ -392,7 +407,6 @@ body {
         height: 300px;
     }
 }
-
 
 
 
@@ -473,18 +487,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .gallery-title{
     text-align:center;
     margin:60px 0;
@@ -534,10 +536,6 @@ max-height:80vh;
 object-fit:contain;
 transition:transform 0.1s ease;
 }
-
-
-
-
 
 
 
@@ -599,12 +597,6 @@ transition:transform 0.1s ease;
         margin-bottom: 15px;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -680,7 +672,6 @@ transition:transform 0.1s ease;
 
 
 
-
 .language-selector {
     display: flex;
     align-items: center;
@@ -692,84 +683,3 @@ transition:transform 0.1s ease;
     color: white;
     cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/***** 
-.line-with-circle {
-    position: absolute;       
-    top: 1800px;               
-    left: 1150px;              
-
-    width: 1px;             
-    height: 175px;
-    background: white;        
-
-    display: flex;
-    align-items: center;
-    
-
-    z-index: 50;
-}
-
-
-.line-with-circle::before {
-    content: "";
-    position: absolute;
-
-    bottom: -12px;         
-    left: -5.5px;
-
-    width: 12px;
-    height: 12px;
-
-    border: 1px solid white;
-    border-radius: 50%;
-    background: transparent;
-}
-
-
-
-
-
-
-
-
-.line-with-circle_down_left{
-    position:absolute;
-    top:1870px;
-    left:650px;
-
-    width:1px;
-    height:175px;
-    background:white;
-    z-index: 11;
-}
-
-.line-with-circle_down_left::before{
-    content:"";
-    position:absolute;
-    top:-12px;
-    left:-5.5px;
-
-    width:12px;
-    height:12px;
-
-    border:1px solid white;
-    border-radius:50%;
-
-    z-index: 11;
-}
-
-
-/*
