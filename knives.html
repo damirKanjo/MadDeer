@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MadDeer - KNIVES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<!-- 🔹 HERO -->
+<div class="container-fluid p-0 hero-section">
+  <img src="images/DSC_0177.png" alt="">
+</div>
+
+
+
+
+<div class="container px-0 hero-wrapper">
+
+    <!-- slika koja prelazi između sekcija -->
+    <img src="imgs/slika-removebg.png" class="hero-img" alt="Mad Deer logo">
+
+    <div class="hero-title">
+        <h1>Kuhinjski noževi</h1>
+        <p class="pt-3">
+            Provjerite kolekciju <b>Mad Deer</b> kuhinskih noževa.
+            Ručno rađeni noževi s pažnjom na detalje, koristeći se premium materijalima.
+            Naša kolekcija nudi savršenu kombinaciju funkcionalnosti i stila. 
+        </p>
+    </div>
+
+</div>
+
+
+<!-- 🔹 PROIZVODI -->
+<div class="container my-5 px-0">
+  <div class="row g-4">
+
+    <!-- KARTICA -->
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="images/DSC_1767.JPG" class="card-img-top product-img">
+
+        <div class="card-body">
+          <h5 class="card-title">Kuhinjski nož</h5>
+          <p class="card-text">Visokokvalitetni nož za profesionalnu upotrebu.</p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="product-code">Šifra: 0001</span>
+            <button class="btn btn-dark order-btn"
+              onclick="orderProduct('0001')">
+              Poruči
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="images/DSC_0220.JPG" class="card-img-top product-img">
+
+        <div class="card-body">
+          <h5 class="card-title">Kuhinjski nož</h5>
+          <p class="card-text">Visokokvalitetni nož za profesionalnu upotrebu.</p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="product-code">Šifra: 0002</span>
+            <button class="btn btn-dark order-btn"
+              onclick="orderProduct('0002')">
+              Poruči
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="images/DSC_0115-min.JPG" class="card-img-top product-img">
+
+        <div class="card-body">
+          <h5 class="card-title">Kuhinjski nož</h5>
+          <p class="card-text">Visokokvalitetni nož za profesionalnu upotrebu.</p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="product-code">Šifra: 0003</span>
+            <button class="btn btn-dark order-btn"
+              onclick="orderProduct('0003')">
+              Poruči
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="images/DSC_0220.JPG" class="card-img-top product-img">
+
+        <div class="card-body">
+          <h5 class="card-title">Kuhinjski nož</h5>
+          <p class="card-text">Visokokvalitetni nož za profesionalnu upotrebu.</p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="product-code">Šifra: 0004</span>
+            <button class="btn btn-dark order-btn"
+              onclick="orderProduct('0004')">
+              Poruči
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="images/DSC_0183 (1).JPG" class="card-img-top product-img">
+
+        <div class="card-body">
+          <h5 class="card-title">Kuhinjski nož</h5>
+          <p class="card-text">Visokokvalitetni nož za profesionalnu upotrebu.</p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="product-code">Šifra: 0005</span>
+            <button class="btn btn-dark order-btn"
+              onclick="orderProduct('0005')">
+              Poruči
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="card product-card">
+        <img src="images/DSC_1775.JPG" class="card-img-top product-img">
+
+        <div class="card-body">
+          <h5 class="card-title">Kuhinjski nož</h5>
+          <p class="card-text">Visokokvalitetni nož za profesionalnu upotrebu.</p>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="product-code">Šifra: 0006</span>
+            <button class="btn btn-dark order-btn"
+              onclick="orderProduct('0006')">
+              Poruči
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- možeš kopirati više kartica -->
+
+  </div>
+</div>
+
+
+
+<!-- 🔹 FORMA -->
+<div class="container text-dark" id="order-form">
+  <div class="card shadow-sm p-4 border-0" style="max-width:700px; margin:auto; border-radius:12px;">
+    
+    <h4 class="mb-4">Porudžbina</h4>
+
+    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="row g-3">
+
+      <!-- Šifra proizvoda -->
+      <div class="col-12">
+        <label class="form-label">Šifra proizvoda</label>
+        <input type="text" name="productCode" class="form-control" required>
+      </div>
+
+      <!-- Ime -->
+      <div class="col-md-6">
+        <label class="form-label">Ime i prezime</label>
+        <input type="text" name="name" class="form-control" required>
+      </div>
+
+      <!-- Email (NOVO) -->
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+
+      <!-- Država -->
+      <div class="col-md-6">
+        <label class="form-label">Država</label>
+        <input type="text" name="country" class="form-control" required>
+      </div>
+
+      <!-- Poštanski broj -->
+      <div class="col-md-6">
+        <label class="form-label">Poštanski broj</label>
+        <input type="text" name="zip" class="form-control" required>
+      </div>
+
+      <!-- Grad -->
+      <div class="col-md-6">
+        <label class="form-label">Mjesto</label>
+        <input type="text" name="city" class="form-control" required>
+      </div>
+
+      <!-- Ulica -->
+      <div class="col-md-6">
+        <label class="form-label">Ulica i broj</label>
+        <input type="text" name="address" class="form-control" required>
+      </div>
+
+      <!-- Submit -->
+      <div class="col-12 mt-3">
+        <button type="submit" class="btn btn-dark w-100 py-3">
+          Pošalji narudžbu
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+
+
+<div class="container px-0 pt-5 text-center">
+    <p style="width: 80px; height: 20px; border-top: 1px solid white; margin: auto;"></p>
+    <p>
+        *Nakon slanja narudžbe, na vašu email adresu stići će potvrda i upute za plaćanje putem PayPala.  
+        Narudžba se obrađuje tek nakon izvršene uplate.
+    </p>
+</div>
+
+
+
+
+<!-- FOOTER -->
+<footer class="footer" id="kontakt">
+    <div class="container">
+        <div class="row gy-4 align-items-start">
+
+            <!-- LEFT -->
+            <div class="col-md-4 text-md-start text-center">
+                <h6 class="footer-title">Mad Deer</h6>
+                <p class="footer-text"
+                   data-en="Handcrafted knives"
+                   data-hr="Ručna izrada noževa">
+                </p>
+                <p class="footer-text"
+                   data-en="Custom knife handles"
+                   data-hr="Personalizirane drške za noževe">
+                </p>
+                <p class="footer-text"
+                   data-en="Meticulously handcrafted leather products"
+                   data-hr="Pažljivo ručno izrađeni kožni proizvodi">
+                </p>
+            </div>
+
+            <!-- CENTER -->
+            <div class="col-md-4 text-center">
+                <h6 class="footer-title">Contact</h6>
+                <!-- <p><i class="fas fa-phone-alt me-2"></i>+385 123 456 789</p> -->
+                <p><i class="fas fa-envelope me-2"></i>info@maddeer.eu</p>
+                <a href="#" style="color: #cccccc; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: #ccc; margin-left: 10px;"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="col-md-4 text-md-end text-center">
+                <h6 class="footer-title">© 2026</h6>
+                <p class="footer-text" data-en="Mad Deer – Artisan Workshop" data-hr="Mad Deer – Zanatska radionica"></p>
+                <p><i class="fas fa-map-marker-alt me-2"></i>Osijek, Croatia</p>
+            </div>
+
+        </div>
+
+
+        <!-- shipping -->
+        <div class="mt-5 pt-5">
+            <h5 style="text-align: center; color: #bbb; font-size: 14px;">
+                We ship all across the EU
+            </h5>
+        </div>
+
+         
+        <!-- bottom line -->
+        <div class="footer-bottom text-center mt-4">
+            <span data-en="Products crafted by Mad Deer Co." data-hr="Proizvodnja Mad Deer."></span>
+        </div>
+    </div>
+</footer>
+
+
+
+<!-- 🔹 JS -->
+<script>
+  function orderProduct(code) {
+    // ubaci šifru u input
+    document.getElementById('productCode').value = code;
+
+    // skrol do forme
+    document.getElementById('order-form').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
