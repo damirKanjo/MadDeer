@@ -1,20 +1,14 @@
-h1, h2 {
-    font-family: 'Sora', sans-serif !important;
-    text-align: left !important;
-}
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     caret-color: transparent;
     user-select: none;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 /* GLOBAL */
 body {
-    font-family: 'Inter', sans-serif;
     background: #111;
     color: #ddd;
     scrollbar-width: none !important;
@@ -47,7 +41,6 @@ body {
 }
 
 .navbar-brand span {
-    font-family: 'Cinzel', serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #fff;
@@ -75,12 +68,34 @@ body {
     color: #b08968;
 }
 
-/* Mobile spacing */
+
+
 @media (max-width: 992px) {
     .navbar-icons {
-        justify-content: center; /* centrirano iznad linkova */
+        justify-content: center;
         width: 100%;
         margin-top: 18px;
+    }
+}
+
+
+.brend {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-image: url('images/slika-removebg.png');
+    background-size: contain;
+    opacity: 0.45;
+    filter: invert(1);
+}
+@media (max-width: 1200px) {
+    .brend {
+        top: 70px !important;
+        width: 200px !important;
+        height: 200px !important;
     }
 }
 
@@ -111,7 +126,6 @@ body {
 }
 
 .hero h1 {
-    font-family: 'Cinzel', serif;
     font-size: clamp(3rem, 7vw, 6rem);
     letter-spacing: 8px;
     margin-bottom: 40px;
@@ -129,6 +143,13 @@ body {
     position: relative;     
     overflow: hidden;         
     cursor: pointer;
+}
+
+.content h2 {
+    position: absolute;
+    bottom: 35px;
+    left: 3%;
+    font-size: medium;
 }
 
 @media (max-width: 1200px) {
@@ -159,7 +180,6 @@ body {
 }
 
 .service-card h5 {
-    font-family: 'Cinzel', serif;
     font-size: 1.4rem;
     margin-bottom: 15px;
 }
@@ -191,112 +211,17 @@ body {
     transform: translateY(0);
 }
 
-/* linije */
-.service-card h5::after {
-    content: "";
-    position: absolute;
-    left: 5%;
-    width: 90%;
-    height: 1px;
-    background: linear-gradient(
-        to right,
-        transparent,
-        rgb(255, 255, 255),
-        transparent
-    );
-}
-
-.service-card h5::after {
-    bottom: 0;
-}
-
-
 
 
 /* SLIKA */
-.slika {
-    position: relative;
+.coverImg {
     background: url("images/DSC_0114.JPG") center/cover no-repeat;
     background-size: cover;
-    height: 565px;
-}
-
-/* FOOTER */
-.footer {
-    background-color: #0f0f0f;
-    color: #ccc;
-    padding: 60px 0 30px;
-    font-size: 14px;
-}
-
-.footer-title {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    margin-bottom: 15px;
-    color: #fff;
-    position: relative;
-    display: inline-block; /* ostaje inline-block */
-}
-
-/* LEFT TITLE – levo poravnanje */
-.text-md-start .footer-title::after {
-    content: "";
-    display: block;         /* ide u novi red ispod teksta */
-    width: 40px;
-    height: 1px;
-    background: #777;
-    margin-top: 8px;
-    margin-left: 0;         /* linija počinje od leve strane teksta */
-}
-
-/* CENTER TITLE – centrirano */
-.text-center .footer-title::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: #777;
-    margin: 8px auto 0;     /* automatski centrirano */
-}
-
-/* RIGHT TITLE – desno poravnanje */
-.text-md-end .footer-title::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: #777;
-    margin-top: 8px;
-    margin-left: auto;      /* linija stoji desno */
-}
-
-.footer-bottom {
-    border-top: 1px solid #222;
-    padding-top: 15px;
-    font-size: 12px;
-    color: #666;
+    height: 665px;
 }
 
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .newsletter-box {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .newsletter-form input,
-    .newsletter-form button {
-        width: 100%;
-    }
-}
 
 
 
@@ -343,7 +268,6 @@ body {
 
 
 .section-title {
-    font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
@@ -620,7 +544,6 @@ transition:transform 0.1s ease;
 
 /* Naslov */
 .hero-content h1 {
-    font-family: 'Cinzel', serif;
     font-size: clamp(3rem, 2vw, 6rem);
     letter-spacing: 8px;
     color: #fff;
