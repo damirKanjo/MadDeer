@@ -139,10 +139,13 @@ body {
 .service-card {
     padding: 80px 0px !important;
     text-align: center;
+    height: 705px;
     transition: transform .4s ease, background .4s ease;
     position: relative;     
     overflow: hidden;         
     cursor: pointer;
+    background-size: cover; 
+    background-position: center;
 }
 
 .content h2 {
@@ -152,9 +155,13 @@ body {
     font-size: medium;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .service-card {
-        height: 500px !important;
+        height:215px !important;
+    }
+    .content h2 {
+        right: 3% !important;
+        text-align: right !important;
     }
 }
 
