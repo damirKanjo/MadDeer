@@ -1,0 +1,68 @@
+/* FOOTER */
+.footer {
+    background-color: #0f0f0f;
+    color: #ccc;
+    padding: 60px 0 30px;
+    font-size: 14px;
+    z-index: 555655;
+}
+
+.footer-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #fff;
+    position: relative;
+    display: inline-block; /* ostaje inline-block */
+}
+
+
+.footer-title::after {
+    content: "";
+    display: block;
+    width: 40px;          /* dužina linije */
+    height: 2px;          /* debljina linije */
+    background-color: #bbb;
+    margin: 8px auto 0;   /* centriranje */
+}
+
+
+/* LEFT TITLE – levo poravnanje */
+.text-md-start .footer-title::after {
+    content: "";
+    display: block;         /* ide u novi red ispod teksta */
+    width: 40px;
+    height: 1px;
+    background: #777;
+    margin-top: 8px;
+    margin-left: 0;         /* linija počinje od leve strane teksta */
+}
+
+/* CENTER TITLE – centrirano */
+.text-center .footer-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #777;
+    margin: 8px auto 0;     /* automatski centrirano */
+}
+
+/* RIGHT TITLE – desno poravnanje */
+.text-md-end .footer-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: #777;
+    margin-top: 8px;
+    margin-left: auto;      /* linija stoji desno */
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #666;
+}
