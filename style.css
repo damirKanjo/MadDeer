@@ -9,65 +9,33 @@
 
 /* GLOBAL */
 body {
-    background: #111;
+    background: #111111;
     color: #ddd;
     scrollbar-width: none !important;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 
 /* NAVBAR */
 .navbar {
-    backdrop-filter: blur(12px);
-    padding: 63.5px 0;
     transition: all 0.3s ease;
-    background: linear-gradient(
-        to bottom,            
-        rgba(26, 25, 25, 0.8),
-        rgba(54, 51, 51, 0.05) 
-    );
+    background-color: #111111;
+    color: #ffffff !important;
+    position: absolute;
 }
 
-.scrolled{
-    padding: 12.5px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand img {
-    width: 42px;
-}
-
-.navbar-brand span {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #fff;
+.navbar-brand h3 {
+    font-size: 1.65rem;
+    color: #ffffff;
 }
 
 .nav-link {
-    color: #ccc;
+    color: #ffffff;
     font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #fff;
+    color: #743009;
 }
-
-
-
-/* Ikonice navbar-a */
-.navbar-icons a {
-    font-size: 1.1rem;
-    color: #fff;
-    transition: color 0.3s;
-}
-
-.navbar-icons a:hover {
-    color: #b08968;
-}
-
 
 
 @media (max-width: 992px) {
@@ -86,7 +54,7 @@ body {
     transform: translate(-50%, -50%);
     width: 300px;
     height: 300px;
-    background-image: url('images/slika-removebg.png');
+    background-image: url('imgs/slika-removebg.png');
     background-size: contain;
     opacity: 0.45;
     filter: invert(1);
@@ -102,7 +70,8 @@ body {
 
 /* HERO */
 .hero {
-    height: 100vh;
+    position: absolute;
+    height: 80vh;
     background: url("images/DSC_0115-min.JPG") center/cover no-repeat;
     position: relative;
 }
@@ -139,13 +108,10 @@ body {
 .service-card {
     padding: 80px 0px !important;
     text-align: center;
-    height: 705px;
     transition: transform .4s ease, background .4s ease;
     position: relative;     
     overflow: hidden;         
     cursor: pointer;
-    background-size: cover; 
-    background-position: center;
 }
 
 .content h2 {
@@ -155,13 +121,9 @@ body {
     font-size: medium;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .service-card {
-        height:215px !important;
-    }
-    .content h2 {
-        right: 3% !important;
-        text-align: right !important;
+        height: 500px !important;
     }
 }
 
@@ -204,7 +166,8 @@ body {
     padding: 47.5px 0;
 }
 
-/* PARAGRAF (sakriven pa se pojavljuje) */
+
+
 .service-card p {
     opacity: 0;
     transform: translateY(20px);
@@ -212,7 +175,8 @@ body {
     margin-bottom: 10px;
 }
 
-/* hover tekst */
+
+
 .service-card:hover p {
     opacity: 1;
     transform: translateY(0);
@@ -220,58 +184,24 @@ body {
 
 
 
-/* SLIKA */
+
 .coverImg {
     background: url("images/DSC_0114.JPG") center/cover no-repeat;
     background-size: cover;
-    height: 665px;
+    height: 315px;
 }
-
-
-
-
-
 
 .msg{
     position: absolute;
-    bottom: 85px;
+    bottom: 55vh;
+    left: 0px;
 }
-
-.hero-vertical-line {
-    position: absolute;
-    bottom: 40px;       /* udaljenost od dna hero sekcije */
-    left: 50%;          /* centrirano horizontalno */
-    transform: translateX(-50%);
-    width: 2px;         /* debljina linije */
-    height: 50px;       /* visina linije */
-    background: rgba(255, 255, 255, 0.8); /* svetla boja */
-    border-radius: 1px; /* blagi zaobljeni krajevi */
-}
-
-
-
-.hero-vertical-line {
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.6;
-        transform: translateX(-50%) translateY(0);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(10px);
-    }
-}
-
 
 
 .icon-invert {
     filter: invert(1);        /* invertuje boje: crno postaje belo */
     transition: filter 0.3s ease; /* za glatku promenu ako treba */
 }
-
 
 
 .section-title {
@@ -559,8 +489,8 @@ transition:transform 0.1s ease;
 /* Ikonice desno */
 .hero-icons {
     position: absolute;
-    right: 20px;
-    top: 48%;
+    right: 0px;
+    top: 43vh;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -577,23 +507,6 @@ transition:transform 0.1s ease;
     color: #b08968;
 }
 
-/* Pulsirajuća linija */
-.hero-vertical-line {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 50px;
-    background: rgba(255,255,255,0.8);
-    border-radius: 1px;
-    animation: pulse 1.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
-    50% { opacity: 1; transform: translateX(-50%) translateY(10px); }
-}
 
 /* RESPONSIVE HERO - mobilni uređaji */
 @media (max-width: 992px) {
