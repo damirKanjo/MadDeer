@@ -20,7 +20,7 @@ body {
     transition: all 0.3s ease;
     background-color: #111111;
     color: #ffffff !important;
-    position: absolute;
+    position: sticky;
 }
 
 .navbar-brand h3 {
@@ -361,16 +361,6 @@ body {
     letter-spacing:2px;
 }
 
-.product-card{
-    border:none;
-    overflow:hidden;
-    background:rgb(29, 28, 28);
-    border-bottom: 1px solid #462403;
-}
-
-.product-card:hover{
-    cursor: pointer;
-}
 
 /* slika */
 

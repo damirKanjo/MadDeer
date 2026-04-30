@@ -45,13 +45,24 @@ body{
     object-fit: cover;
 }
 
+.card {
+    background-color: #141414;
+    color: white;
+}
+
+input{
+    background-color: #0c0e0f !important;
+    color: white !important;
+}
 
 /* Kartice */
 .product-card {
     border: none;
+    color: rgb(255, 255, 255);
     border-radius: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    background-color: #141414;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
@@ -68,7 +79,7 @@ body{
 
 .product-code {
     font-size: 0.9rem;
-    color: rgb(151, 35, 0);
+    color: rgb(218, 145, 18);
 }
 
 .order-btn {
@@ -78,5 +89,6 @@ body{
 #order-form {
     margin-top: 80px;
     padding: 40px;
-    background: #f8f9fa;
+    background: #0c0e0f;
+    border-radius: 45px;
 }
