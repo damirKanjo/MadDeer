@@ -1,17 +1,3 @@
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-
-
-
-
 const langEnElems = document.querySelectorAll('[data-en]');
 const langHrElems = document.querySelectorAll('[data-hr]');
 
@@ -57,27 +43,47 @@ modalImg.src = img.src;
 
 const img = document.getElementById("modalImage");
 
-img.addEventListener("mousemove", function(e){
+if (img) {
+    img.addEventListener("mousemove", function(e){
 
-const rect = img.getBoundingClientRect();
+        const rect = img.getBoundingClientRect();
 
-const x = e.clientX - rect.left;
-const y = e.clientY - rect.top;
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-const xPercent = (x / rect.width) * 100;
-const yPercent = (y / rect.height) * 100;
+        const xPercent = (x / rect.width) * 100;
+        const yPercent = (y / rect.height) * 100;
 
-img.style.transformOrigin = xPercent + "% " + yPercent + "%";
-img.style.transform = "scale(2)";
+        img.style.transformOrigin = xPercent + "% " + yPercent + "%";
+        img.style.transform = "scale(2)";
+    });
+
+    img.addEventListener("mouseleave", function(){
+        img.style.transform = "scale(1)";
+    });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+        const placeholder = document.getElementById("navbar-placeholder");
+
+        if (placeholder) {
+            placeholder.innerHTML = data;
+
+            // bootstrap fix
+            var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
+            collapseElementList.map(function (collapseEl) {
+                return new bootstrap.Collapse(collapseEl, {
+                    toggle: false
+                });
+            });
+        }
+    })
+    .catch(err => console.error("Navbar error:", err));
 
 });
-
-img.addEventListener("mouseleave", function(){
-
-img.style.transform = "scale(1)";
-
-});
-
-
-
-
