@@ -1,89 +1,85 @@
-const langEnElems = document.querySelectorAll('[data-en]');
-const langHrElems = document.querySelectorAll('[data-hr]');
+document.addEventListener("DOMContentLoaded", () => {
 
-function setLanguage(lang) {
-    langEnElems.forEach(el => {
-        if(el.placeholder !== undefined) {
-            el.placeholder = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-hr');
-        } else {
-            el.innerHTML = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-hr');
-        }
-    });
-}
+    // ---------------------------
+    // LANGUAGE SYSTEM
+    // ---------------------------
 
-// Default English
-setLanguage('en');
+    let currentLang = "en";
 
-// Event listeners for flags
-document.querySelectorAll('#lang-en, #lang-en-mobile').forEach(btn => {
-    btn.addEventListener('click', () => setLanguage('en'));
-});
-document.querySelectorAll('#lang-hr, #lang-hr-mobile').forEach(btn => {
-    btn.addEventListener('click', () => setLanguage('hr'));
-});
+    function setLanguage(lang) {
+        currentLang = lang;
 
+        document.querySelectorAll('[data-en], [data-hr]').forEach(el => {
 
+            const en = el.getAttribute('data-en');
+            const hr = el.getAttribute('data-hr');
 
+            if (!en && !hr) return;
 
+            // input / textarea
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.placeholder = (lang === "en") ? en : hr;
+            } else {
+                el.innerHTML = (lang === "en") ? en : hr;
+            }
+        });
+    }
 
-
-
-
-
-function openImage(img){
-
-let modalImg = document.getElementById("modalImage");
-
-modalImg.src = img.src;
-
-}
-
-
-
-
-const img = document.getElementById("modalImage");
-
-if (img) {
-    img.addEventListener("mousemove", function(e){
-
-        const rect = img.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const xPercent = (x / rect.width) * 100;
-        const yPercent = (y / rect.height) * 100;
-
-        img.style.transformOrigin = xPercent + "% " + yPercent + "%";
-        img.style.transform = "scale(2)";
-    });
-
-    img.addEventListener("mouseleave", function(){
-        img.style.transform = "scale(1)";
-    });
-}
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
+    // ---------------------------
+    // NAVBAR LOAD (FETCH)
+    // ---------------------------
 
     fetch("navbar.html")
-    .then(res => res.text())
-    .then(data => {
-        const placeholder = document.getElementById("navbar-placeholder");
+        .then(res => res.text())
+        .then(html => {
 
-        if (placeholder) {
-            placeholder.innerHTML = data;
+            document.getElementById("navbar-placeholder").innerHTML = html;
 
-            // bootstrap fix
-            var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'));
-            collapseElementList.map(function (collapseEl) {
-                return new bootstrap.Collapse(collapseEl, {
-                    toggle: false
-                });
+            // LANGUAGE CLICK (delegation)
+            document.addEventListener("click", (e) => {
+                const btn = e.target.closest(".lang-btn");
+                if (!btn) return;
+
+                const lang = btn.dataset.lang;
+                if (!lang) return;
+
+                // active class UI
+                document.querySelectorAll(".lang-btn").forEach(el => el.classList.remove("active"));
+                btn.classList.add("active");
+
+                setLanguage(lang);
             });
-        }
-    })
-    .catch(err => console.error("Navbar error:", err));
+
+            // default language
+            setLanguage(currentLang);
+        })
+        .catch(err => console.error("Navbar error:", err));
+
+
+    // ---------------------------
+    // IMAGE ZOOM (SAFE)
+    // ---------------------------
+
+    const img = document.getElementById("modalImage");
+
+    if (img) {
+        img.addEventListener("mousemove", function (e) {
+
+            const rect = img.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const xPercent = (x / rect.width) * 100;
+            const yPercent = (y / rect.height) * 100;
+
+            img.style.transformOrigin = xPercent + "% " + yPercent + "%";
+            img.style.transform = "scale(2)";
+        });
+
+        img.addEventListener("mouseleave", function () {
+            img.style.transform = "scale(1)";
+        });
+    }
 
 });
