@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MadDeer - LEATHER</title>
+  <title data-en="MadDeer - LEATHER GOODS"
+         data-hr="MadDeer - KOŽNA GALANTERIJA">
+  </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -28,11 +30,17 @@
     <img src="images/slika-removebg.png" class="hero-img" alt="Mad Deer logo">
 
     <div class="hero-title">
-        <h1>Kožna galenterija</h1>
-        <p class="pt-3">
-            Provjerite kolekciju <b>Mad Deer</b> proizvoda od kože.
-            Svaki komad je ručno izrađen s pažnjom na detalje, koristeći samo najkvalitetniju kožu i konac.
-            Naša kolekcija nudi savršenu kombinaciju funkcionalnosti i stila. 
+        <h1 data-en="Leather goods" 
+            data-hr="Kožna galanterija">
+        </h1>
+        <p class="pt-3"
+           data-en="Explore the <b>Mad Deer</b> leather goods collection.
+                    Each piece is handcrafted with attention to detail, using only the highest-quality leather and thread.
+                    Our collection offers the perfect blend of functionality and style." 
+           data-hr="Provjerite kolekciju <b>Mad Deer</b> proizvoda od kože.
+                    Svaki komad je ručno izrađen s pažnjom na detalje, koristeći samo najkvalitetniju kožu i konac.
+                    Naša kolekcija nudi savršenu kombinaciju funkcionalnosti i stila. "
+        >
         </p>
     </div>
 
@@ -172,7 +180,7 @@
     
     <h4 class="mb-4">Porudžbina</h4>
 
-    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="row g-3">
+    <form action="https://formspree.io/f/YOUR_ID" method="POST" class="row g-3 forma">
 
       <!-- Šifra proizvoda -->
       <div class="col-12">
@@ -182,44 +190,43 @@
 
       <!-- Ime -->
       <div class="col-md-6">
-        <label class="form-label">Ime i prezime</label>
+        <label class="form-label" data-en="Name and surname" data-hr="Ime i prezime"></label>
         <input type="text" name="name" class="form-control" required>
       </div>
 
       <!-- Email (NOVO) -->
       <div class="col-md-6">
-        <label class="form-label">Email</label>
+        <label class="form-label" data-en="Email" data-hr="Email"></label>
         <input type="email" name="email" class="form-control" required>
       </div>
 
       <!-- Država -->
       <div class="col-md-6">
-        <label class="form-label">Država</label>
+        <label class="form-label" data-en="Country" data-hr="Država"></label>
         <input type="text" name="country" class="form-control" required>
       </div>
 
       <!-- Poštanski broj -->
       <div class="col-md-6">
-        <label class="form-label">Poštanski broj</label>
+        <label class="form-label" data-en="Postal code" data-hr="Poštanski broj"></label>
         <input type="text" name="zip" class="form-control" required>
       </div>
 
       <!-- Grad -->
       <div class="col-md-6">
-        <label class="form-label">Mjesto</label>
+        <label class="form-label" data-en="City" data-hr="Grad"></label>
         <input type="text" name="city" class="form-control" required>
       </div>
 
       <!-- Ulica -->
       <div class="col-md-6">
-        <label class="form-label">Ulica i broj</label>
+        <label class="form-label" data-en="Street and number" data-hr="Ulica i broj"></label>
         <input type="text" name="address" class="form-control" required>
       </div>
 
       <!-- Submit -->
       <div class="col-12 mt-3">
-        <button type="submit" class="btn btn-dark w-100 py-3">
-          Pošalji narudžbu
+        <button type="submit" class="btn btn-dark w-100 py-3" data-en="Send order" data-hr="Pošalji narudžbu">
         </button>
       </div>
 
@@ -228,13 +235,17 @@
 </div>
 
 
+
 <div class="container px-0 py-5 text-center">
     <p style="width: 80px; height: 20px; border-top: 1px solid white; margin: auto;"></p>
-    <p>
-        *Nakon slanja narudžbe, na vašu email adresu stići će potvrda i upute za plaćanje putem PayPala.  
-        Narudžba se obrađuje tek nakon izvršene uplate.
+    <p data-en="*After placing your order, you will receive a confirmation email with payment instructions via PayPal.
+       Your order will be processed only after the payment has been completed.*"
+       data-hr="*Nakon slanja narudžbe, na vašu email adresu stići će potvrda i upute za plaćanje putem PayPala.  
+       Narudžba se obrađuje tek nakon izvršene uplate."
+    >
     </p>
 </div>
+
 
 
 <!-- FOOTER -->
@@ -261,10 +272,12 @@
 
             <!-- CENTER -->
             <div class="col-md-4 text-center">
-                <h6 class="footer-title">Contact</h6>
-                <!-- <p><i class="fas fa-phone-alt me-2"></i>+385 123 456 789</p> -->
+                <h6 class="footer-title"
+                    data-en="Contact" 
+                    data-hr="Kontakt"
+                ></h6>
                 <p><i class="fas fa-envelope me-2"></i>info@maddeer.eu</p>
-                <a href="#" style="color: #cccccc; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: #ccc; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
                 <a href="#" style="color: #ccc; margin-left: 10px;"><i class="fab fa-facebook-f"></i></a>
             </div>
 
