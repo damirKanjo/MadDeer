@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ---------------------------
-    // LANGUAGE SYSTEM
-    // ---------------------------
-
     let currentLang = "en";
 
     function setLanguage(lang) {
@@ -24,10 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
-    // ---------------------------
-    // NAVBAR LOAD (FETCH)
-    // ---------------------------
 
     fetch("navbar.html")
         .then(res => res.text())
@@ -55,10 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(err => console.error("Navbar error:", err));
 
-
-    // ---------------------------
-    // IMAGE ZOOM (SAFE)
-    // ---------------------------
 
     const img = document.getElementById("modalImage");
 
